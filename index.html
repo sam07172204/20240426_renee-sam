@@ -21,12 +21,12 @@
                 <li><span id="seconds"></span>Seconds</li>
                 </ul>
             </div>
-            <div id="content" class="emoji"  onclick="javascript:location.href='./renee&sam0426.html'">
+            <div id="content" class="emoji"  onclick="javascript:">
                 <span>🥳</span>
                 <span>🎉</span>
                 <span>🎂</span>
                 <div class="container">
-                    <a href="#" class="btn">Enter</a>
+                    <a href="#" class="btn" onclick="enter_page()">Enter</a>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
-    birthday = '2024/03/29 18:30'
+    birthday = '2024/03/29 19:30'
     //end
     
     const countDown = new Date(birthday).getTime(),
@@ -71,7 +71,18 @@ const second = 1000,
         }, 0)
     }());
     
-
+    function enter_page(){
+        birthday = '2024/04/26 14:00';
+        const countDown = new Date(birthday).getTime()
+        const now = new Date().getTime(),
+        distance = countDown - now;
+        if(distance<0){
+            location.href='./renee&sam0426_surprise.html'
+        }
+        else{
+            location.href='./renee&sam0426.html'
+        }
+    }
 
 
 </script>
