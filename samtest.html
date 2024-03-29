@@ -46,7 +46,7 @@ const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
-    birthday = '2024/03/28 17:09'
+    birthday = '2024/03/29 11:16'
     //end
     
     const countDown = new Date(birthday).getTime(),
@@ -72,11 +72,12 @@ const second = 1000,
     }());
     
     function enter_page(){
-        birthday = '2024/03/28 17:10';
+        birthday = '2024/03/29 11:17';
         const countDown = new Date(birthday).getTime()
         const now = new Date().getTime(),
         distance = countDown - now;
         if(distance<0){
+            document.getElementById("headline").innerText = "2024/04/26 阿蕊 ㄟ 生日驚喜 !";
             location.href='./renee&sam0426_surprise.html'
         }
         else{
